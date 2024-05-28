@@ -1,1 +1,72 @@
-*, :before, :after {box-sizing:border-box;}
+*, 
+
+:before, 
+
+/*
+What are the pseudos selectors before and after?
+Include elements and styles inmediately after or inmediately before the targeted element.
+*/
+::after {
+    box-sizing:border-box; 
+    }
+/* 
+h2::before {
+    content: "!";
+}
+
+h2::after {
+    content: "?";
+} */
+
+:root {
+    --primary: #FA7343;
+}
+
+body {
+    font: family: 'Lato, sans-serif';
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Intro', sans-serif;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title{
+    color: var(--primary);
+}
+
+.nav-mobile img{
+    width: 32px;
+}
+
+.description{
+    color: gray;
+}
+
+.nav-mobile img{
+    width: 32px;
+}
+
+.desktop-menu{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-menu {
+        display: block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+}
